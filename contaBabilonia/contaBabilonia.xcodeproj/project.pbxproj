@@ -12,6 +12,8 @@
 		DCE0981D1C1A160700BB64FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE0981B1C1A160700BB64FE /* Main.storyboard */; };
 		DCE0981F1C1A160700BB64FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE0981E1C1A160700BB64FE /* Assets.xcassets */; };
 		DCE098221C1A160700BB64FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE098201C1A160700BB64FE /* LaunchScreen.storyboard */; };
+		DCE0982D1C1A1F4800BB64FE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE0982B1C1A1F4800BB64FE /* Bolts.framework */; };
+		DCE0982E1C1A1F4800BB64FE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE0982C1C1A1F4800BB64FE /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		DCE0981E1C1A160700BB64FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCE098211C1A160700BB64FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCE098231C1A160700BB64FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCE0982B1C1A1F4800BB64FE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/parse-library-1.10.0/Bolts.framework"; sourceTree = "<group>"; };
+		DCE0982C1C1A1F4800BB64FE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Downloads/parse-library-1.10.0/Parse.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE0982E1C1A1F4800BB64FE /* Parse.framework in Frameworks */,
+				DCE0982D1C1A1F4800BB64FE /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +44,8 @@
 		DCE0980B1C1A160700BB64FE = {
 			isa = PBXGroup;
 			children = (
+				DCE0982B1C1A1F4800BB64FE /* Bolts.framework */,
+				DCE0982C1C1A1F4800BB64FE /* Parse.framework */,
 				DCE098161C1A160700BB64FE /* contaBabilonia */,
 				DCE098151C1A160700BB64FE /* Products */,
 			);
