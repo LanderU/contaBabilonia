@@ -12,6 +12,22 @@
 		DCE0981D1C1A160700BB64FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE0981B1C1A160700BB64FE /* Main.storyboard */; };
 		DCE0981F1C1A160700BB64FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE0981E1C1A160700BB64FE /* Assets.xcassets */; };
 		DCE098221C1A160700BB64FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE098201C1A160700BB64FE /* LaunchScreen.storyboard */; };
+		DCF852741C234572001A24DD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852731C234572001A24DD /* AudioToolbox.framework */; };
+		DCF852761C234583001A24DD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852751C234583001A24DD /* CFNetwork.framework */; };
+		DCF852781C234592001A24DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852771C234592001A24DD /* CoreGraphics.framework */; };
+		DCF8527A1C2345A5001A24DD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852791C2345A5001A24DD /* CoreLocation.framework */; };
+		DCF8527C1C2345D3001A24DD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF8527B1C2345D3001A24DD /* QuartzCore.framework */; };
+		DCF8527E1C2345E1001A24DD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF8527D1C2345E1001A24DD /* Security.framework */; };
+		DCF852801C2345F0001A24DD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF8527F1C2345F0001A24DD /* StoreKit.framework */; };
+		DCF852821C2345FF001A24DD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852811C2345FF001A24DD /* SystemConfiguration.framework */; };
+		DCF852841C234610001A24DD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852831C234610001A24DD /* libz.tbd */; };
+		DCF852861C23461F001A24DD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852851C23461F001A24DD /* libsqlite3.tbd */; };
+		DCF852901C2347BE001A24DD /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF8528D1C2347BE001A24DD /* libz.1.1.3.tbd */; };
+		DCF852911C2347BE001A24DD /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF8528E1C2347BE001A24DD /* libz.1.2.5.tbd */; };
+		DCF852921C2347BE001A24DD /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF8528F1C2347BE001A24DD /* libz.1.tbd */; };
+		DCF852941C2347D1001A24DD /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852931C2347D1001A24DD /* libsqlite3.0.tbd */; };
+		DCF852981C2357B9001A24DD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852961C2357B9001A24DD /* Bolts.framework */; };
+		DCF852991C2357B9001A24DD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF852971C2357B9001A24DD /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +38,22 @@
 		DCE0981E1C1A160700BB64FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCE098211C1A160700BB64FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCE098231C1A160700BB64FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF852731C234572001A24DD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DCF852751C234583001A24DD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DCF852771C234592001A24DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DCF852791C2345A5001A24DD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DCF8527B1C2345D3001A24DD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DCF8527D1C2345E1001A24DD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DCF8527F1C2345F0001A24DD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DCF852811C2345FF001A24DD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DCF852831C234610001A24DD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DCF852851C23461F001A24DD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DCF8528D1C2347BE001A24DD /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		DCF8528E1C2347BE001A24DD /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		DCF8528F1C2347BE001A24DD /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		DCF852931C2347D1001A24DD /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DCF852961C2357B9001A24DD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = contaBabilonia/Bolts.framework; sourceTree = "<group>"; };
+		DCF852971C2357B9001A24DD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = contaBabilonia/Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +61,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF852981C2357B9001A24DD /* Bolts.framework in Frameworks */,
+				DCF852991C2357B9001A24DD /* Parse.framework in Frameworks */,
+				DCF852941C2347D1001A24DD /* libsqlite3.0.tbd in Frameworks */,
+				DCF852901C2347BE001A24DD /* libz.1.1.3.tbd in Frameworks */,
+				DCF852911C2347BE001A24DD /* libz.1.2.5.tbd in Frameworks */,
+				DCF852921C2347BE001A24DD /* libz.1.tbd in Frameworks */,
+				DCF852861C23461F001A24DD /* libsqlite3.tbd in Frameworks */,
+				DCF852841C234610001A24DD /* libz.tbd in Frameworks */,
+				DCF852821C2345FF001A24DD /* SystemConfiguration.framework in Frameworks */,
+				DCF852801C2345F0001A24DD /* StoreKit.framework in Frameworks */,
+				DCF8527E1C2345E1001A24DD /* Security.framework in Frameworks */,
+				DCF8527C1C2345D3001A24DD /* QuartzCore.framework in Frameworks */,
+				DCF8527A1C2345A5001A24DD /* CoreLocation.framework in Frameworks */,
+				DCF852781C234592001A24DD /* CoreGraphics.framework in Frameworks */,
+				DCF852761C234583001A24DD /* CFNetwork.framework in Frameworks */,
+				DCF852741C234572001A24DD /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +86,7 @@
 		DCE0980B1C1A160700BB64FE = {
 			isa = PBXGroup;
 			children = (
+				DCF852601C2339F8001A24DD /* Frameworks */,
 				DCE098161C1A160700BB64FE /* contaBabilonia */,
 				DCE098151C1A160700BB64FE /* Products */,
 			);
@@ -62,6 +111,29 @@
 				DCE098231C1A160700BB64FE /* Info.plist */,
 			);
 			path = contaBabilonia;
+			sourceTree = "<group>";
+		};
+		DCF852601C2339F8001A24DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCF852961C2357B9001A24DD /* Bolts.framework */,
+				DCF852971C2357B9001A24DD /* Parse.framework */,
+				DCF852931C2347D1001A24DD /* libsqlite3.0.tbd */,
+				DCF8528D1C2347BE001A24DD /* libz.1.1.3.tbd */,
+				DCF8528E1C2347BE001A24DD /* libz.1.2.5.tbd */,
+				DCF8528F1C2347BE001A24DD /* libz.1.tbd */,
+				DCF852851C23461F001A24DD /* libsqlite3.tbd */,
+				DCF852831C234610001A24DD /* libz.tbd */,
+				DCF852811C2345FF001A24DD /* SystemConfiguration.framework */,
+				DCF8527F1C2345F0001A24DD /* StoreKit.framework */,
+				DCF8527D1C2345E1001A24DD /* Security.framework */,
+				DCF8527B1C2345D3001A24DD /* QuartzCore.framework */,
+				DCF852791C2345A5001A24DD /* CoreLocation.framework */,
+				DCF852771C234592001A24DD /* CoreGraphics.framework */,
+				DCF852751C234583001A24DD /* CFNetwork.framework */,
+				DCF852731C234572001A24DD /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +319,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/contaBabilonia",
+				);
 				INFOPLIST_FILE = contaBabilonia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lander.contaBabilonia;
@@ -258,6 +334,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/contaBabilonia",
+				);
 				INFOPLIST_FILE = contaBabilonia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lander.contaBabilonia;
