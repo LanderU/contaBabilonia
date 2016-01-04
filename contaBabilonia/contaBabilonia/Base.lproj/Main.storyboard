@@ -27,6 +27,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zk1-co-mJ2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-iE-SIX">
                                 <rect key="frame" x="251" y="248" width="99" height="30"/>
@@ -35,6 +38,9 @@
                                 <state key="normal" title="Sign up">
                                     <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Idw-Cf-qic"/>
+                                </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-vb-sBi">
                                 <rect key="frame" x="251" y="293" width="99" height="74"/>
@@ -94,6 +100,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="goButton" destination="2fk-L8-7Cr" id="hcN-YE-Cal"/>
+                        <outlet property="repeatTextField" destination="o1n-XT-7fj" id="fyE-ry-bS4"/>
+                        <outlet property="signInButton" destination="K1e-7M-H5T" id="p0X-al-luW"/>
+                        <outlet property="signUpButton" destination="5nr-iE-SIX" id="Bmg-0a-A9F"/>
+                        <outlet property="usernamePassStackView" destination="EuJ-vb-sBi" id="pev-T5-MEi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
