@@ -17,39 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="TFo-AA-QRl">
-                                <rect key="frame" x="251.5" y="173" width="98.5" height="254"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1e-7M-H5T">
+                                <rect key="frame" x="251" y="199" width="99" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="NEV-ha-smJ"/>
+                                </constraints>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-iE-SIX">
+                                <rect key="frame" x="251" y="248" width="99" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-vb-sBi">
+                                <rect key="frame" x="251" y="293" width="99" height="74"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1e-7M-H5T">
-                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Sign in">
-                                            <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-iE-SIX">
-                                        <rect key="frame" x="0.0" y="56" width="98.5" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Sign up">
-                                            <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-uP-vLR">
-                                        <rect key="frame" x="0.0" y="112" width="98.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Q-vN-6nd">
-                                        <rect key="frame" x="0.0" y="168" width="98.5" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="REPEAT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1n-XT-7fj">
-                                        <rect key="frame" x="0.0" y="224" width="98.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="44" width="99" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -57,11 +54,37 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="REPEAT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1n-XT-7fj">
+                                <rect key="frame" x="251" y="381" width="99" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fk-L8-7Cr">
+                                <rect key="frame" x="251" y="426" width="99" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <animations/>
                         <constraints>
-                            <constraint firstItem="TFo-AA-QRl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1jf-FK-Hlp"/>
-                            <constraint firstItem="TFo-AA-QRl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z3c-ca-MGF"/>
+                            <constraint firstItem="5nr-iE-SIX" firstAttribute="leading" secondItem="EuJ-vb-sBi" secondAttribute="leading" id="1aA-dt-epu"/>
+                            <constraint firstItem="5nr-iE-SIX" firstAttribute="top" secondItem="K1e-7M-H5T" secondAttribute="bottom" constant="19" id="91C-vq-SJh"/>
+                            <constraint firstItem="EuJ-vb-sBi" firstAttribute="top" secondItem="5nr-iE-SIX" secondAttribute="bottom" constant="15" id="9Qn-uj-qve"/>
+                            <constraint firstItem="2fk-L8-7Cr" firstAttribute="top" secondItem="o1n-XT-7fj" secondAttribute="bottom" constant="15" id="9hQ-pw-VG0"/>
+                            <constraint firstItem="K1e-7M-H5T" firstAttribute="leading" secondItem="5nr-iE-SIX" secondAttribute="leading" id="HNU-2Q-R3c"/>
+                            <constraint firstItem="EuJ-vb-sBi" firstAttribute="trailing" secondItem="5nr-iE-SIX" secondAttribute="trailing" id="Ycr-ki-7cL"/>
+                            <constraint firstItem="K1e-7M-H5T" firstAttribute="top" secondItem="rQG-Wp-afV" secondAttribute="bottom" constant="135" id="dbU-rJ-CyO"/>
+                            <constraint firstItem="o1n-XT-7fj" firstAttribute="trailing" secondItem="EuJ-vb-sBi" secondAttribute="trailing" id="g9b-eG-ENa"/>
+                            <constraint firstItem="K1e-7M-H5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gSN-dl-cMQ"/>
+                            <constraint firstItem="EuJ-vb-sBi" firstAttribute="leading" secondItem="o1n-XT-7fj" secondAttribute="leading" id="oFd-Hk-jpw"/>
+                            <constraint firstItem="o1n-XT-7fj" firstAttribute="leading" secondItem="2fk-L8-7Cr" secondAttribute="leading" id="pI7-Mj-Inv"/>
+                            <constraint firstItem="2fk-L8-7Cr" firstAttribute="trailing" secondItem="o1n-XT-7fj" secondAttribute="trailing" id="pzS-AW-r0H"/>
+                            <constraint firstItem="o1n-XT-7fj" firstAttribute="top" secondItem="EuJ-vb-sBi" secondAttribute="bottom" constant="14" id="vfG-ru-4Iw"/>
+                            <constraint firstItem="5nr-iE-SIX" firstAttribute="trailing" secondItem="K1e-7M-H5T" secondAttribute="trailing" id="wLJ-jq-FPR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XIb-Yf-Gc1">
@@ -74,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="380"/>
+            <point key="canvasLocation" x="818" y="232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C5q-FG-Lma">
