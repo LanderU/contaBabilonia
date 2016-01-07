@@ -56,6 +56,10 @@ class ViewController: UIViewController {
     // Referencia al passord
     @IBOutlet weak var password: UITextField!
     
+    // Variable para saber de que botón venimos 
+    var flagButton : Bool = true
+
+    
     //Ocultamos el botón de sign up al pulsar sign in y mostramos los stack view correspondientes a esta opción
     @IBAction func touchSignIn(sender: UIButton) {
         // Ocultamos el botón
@@ -76,20 +80,57 @@ class ViewController: UIViewController {
         repeatTextField.hidden = false
         // Mostramos el botón para ingresar
         goButton.hidden = false
+        // Le cambiamos el valor a la variable para poder hacer el registro
+        flagButton = false
         
     } //touch sign up
+    
     // Acción de pulsar el botón de GO
     @IBAction func touchGo(sender: UIButton) {
-        var user = PFObject(className: nombreUsuario.text!)
-        user["password"] = password.text!
-        user.saveInBackgroundWithBlock(){
-            (success: Bool, error: NSError?)-> Void in
-            if (!success){
-                
-                print("No se ha podido registrar el usuario")
+        // Creamos la constante para el usuario.
+        let usuario = PFUser()
+        //En función de que botón vengamos el botón go se comportará de una manera o de otra.
+        if (flagButton){
+            // Venimos del botón sign in, por lo tanto comprobamos que el usuario está en Parse
+            PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
+                (user: PFUser?, error: NSError?) -> Void in
+                if user != nil {
+                    // Tenemos al usuario por lo tanto avanzamos al tableView
+                } else {
+                    // Mostramos el mensaje de error en un textLabel?
+                }
             }
+        
+        } else {
+            // Si venimos de pulsar el botón Sign Up registramos el usuario y avanzamos si el usuario no existe y si la contraseña la ha puesto bien las dos veces.
+            if(password.text! == repeatTextField.text!){
+                PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
+                    (user: PFUser?, error: NSError?) -> Void in
+                    if user != nil {
+                        // Error el usuario ya lo tenemos en nuestro server
+                    } else {
+                        // The login failed. Check error to see why.
+                        usuario.username = self.nombreUsuario.text!
+                        usuario.password = self.password.text!
+                        usuario.signUpInBackgroundWithBlock {
+                            (succeeded: Bool, error: NSError?) -> Void in
+                            if let error = error {
+                                let _ = error.userInfo["error"] as? NSString
+                                // Show the errorString somewhere and let the user try again.
+                                
+                            } else{
+                                
+                            } // End if
+                            
+                        }// signUp
+                        
+                    }// En if
+
+                    }
+                }
             
-        }
+            } // End if
+        
     }// touch GO
 }// Class
 

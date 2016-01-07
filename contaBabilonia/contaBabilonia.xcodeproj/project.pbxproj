@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC11A22C1C3EE77C00B8972C /* Parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC11A22B1C3EE77C00B8972C /* Parse.plist */; };
 		DCE098181C1A160700BB64FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE098171C1A160700BB64FE /* AppDelegate.swift */; };
 		DCE0981A1C1A160700BB64FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE098191C1A160700BB64FE /* ViewController.swift */; };
 		DCE0981D1C1A160700BB64FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCE0981B1C1A160700BB64FE /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC11A22B1C3EE77C00B8972C /* Parse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Parse.plist; path = ../../../../Parse.plist; sourceTree = "<group>"; };
 		DCE098141C1A160700BB64FE /* contaBabilonia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contaBabilonia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE098171C1A160700BB64FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCE098191C1A160700BB64FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE098171C1A160700BB64FE /* AppDelegate.swift */,
+				DC11A22B1C3EE77C00B8972C /* Parse.plist */,
 				DCE098191C1A160700BB64FE /* ViewController.swift */,
 				DCE0981B1C1A160700BB64FE /* Main.storyboard */,
 				DCE0981E1C1A160700BB64FE /* Assets.xcassets */,
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC11A22C1C3EE77C00B8972C /* Parse.plist in Resources */,
 				DCE098221C1A160700BB64FE /* LaunchScreen.storyboard in Resources */,
 				DCE0981F1C1A160700BB64FE /* Assets.xcassets in Resources */,
 				DCE0981D1C1A160700BB64FE /* Main.storyboard in Resources */,
