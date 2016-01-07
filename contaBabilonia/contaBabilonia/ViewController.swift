@@ -87,6 +87,7 @@ class ViewController: UIViewController {
     
     // Acción de pulsar el botón de GO
     @IBAction func touchGo(sender: UIButton) {
+        
         // Creamos la constante para el usuario.
         let usuario = PFUser()
         //En función de que botón vengamos el botón go se comportará de una manera o de otra.
@@ -104,10 +105,13 @@ class ViewController: UIViewController {
         } else {
             // Si venimos de pulsar el botón Sign Up registramos el usuario y avanzamos si el usuario no existe y si la contraseña la ha puesto bien las dos veces.
             if(password.text! == repeatTextField.text!){
+                    print(password.text!)
+                    print(repeatTextField.text!)
                 PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
                     (user: PFUser?, error: NSError?) -> Void in
                     if user != nil {
                         // Error el usuario ya lo tenemos en nuestro server
+                        print("El usuario ya está creado")
                     } else {
                         // The login failed. Check error to see why.
                         usuario.username = self.nombreUsuario.text!
@@ -117,19 +121,19 @@ class ViewController: UIViewController {
                             if let error = error {
                                 let _ = error.userInfo["error"] as? NSString
                                 // Show the errorString somewhere and let the user try again.
-                                
+                                print("No se puede registrar el usuario")
                             } else{
-                                
+                                print("Pasamos al tableview")
                             } // End if
                             
                         }// signUp
                         
-                    }// En if
-
-                    }
+                    }// End if
                 }
-            
-            } // End if
+            }else {
+               print("Contraseñas no coinciden")
+            }//end if
+        }// end if
         
     }// touch GO
 }// Class
