@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Almacenamiento local
+        
+        Parse.enableLocalDatastore()
+        
+        // Habilitar Parse, usando las claves contenidas en el fichero Parse.plist
+        if let path = NSBundle.mainBundle().pathForResource("Parse", ofType: "plist") {
+            if let parse = NSDictionary(contentsOfFile: path) as? Dictionary<String, String> {
+                Parse.setApplicationId(parse["PARSE_APPLICATION_ID"]!, clientKey: parse["PARSE_CLIENT_ID"]!)
+            }
+        }
+        
         return true
     }
 

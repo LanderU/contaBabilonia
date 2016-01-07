@@ -73,6 +73,9 @@
                                 <state key="normal" title="Go">
                                     <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJt-vi-7Wq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -102,6 +105,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="goButton" destination="2fk-L8-7Cr" id="hcN-YE-Cal"/>
+                        <outlet property="nombreUsuario" destination="q8h-uP-vLR" id="qm9-ag-NX7"/>
+                        <outlet property="password" destination="Q7Q-vN-6nd" id="a5W-Yd-yV0"/>
                         <outlet property="repeatTextField" destination="o1n-XT-7fj" id="fyE-ry-bS4"/>
                         <outlet property="signInButton" destination="K1e-7M-H5T" id="p0X-al-luW"/>
                         <outlet property="signUpButton" destination="5nr-iE-SIX" id="Bmg-0a-A9F"/>

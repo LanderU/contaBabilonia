@@ -8,7 +8,10 @@
 
 import UIKit
 
+import Parse
+
 class ViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +51,11 @@ class ViewController: UIViewController {
     // Referencia al botón de acceder
     @IBOutlet weak var goButton: UIButton!
     
+    //Referencia al textField para quedarnos con el nombre de usuario
+    @IBOutlet weak var nombreUsuario: UITextField!
+    // Referencia al passord
+    @IBOutlet weak var password: UITextField!
+    
     //Ocultamos el botón de sign up al pulsar sign in y mostramos los stack view correspondientes a esta opción
     @IBAction func touchSignIn(sender: UIButton) {
         // Ocultamos el botón
@@ -57,6 +65,7 @@ class ViewController: UIViewController {
         // Mostramos el botón para ingresar
         goButton.hidden = false
     } //touch sign in
+    
     // Método que hace lo mismo que el anterior pero enseñamos además el textField repetir para que agregue de nuevo el password.
     @IBAction func touchSignUp(sender: UIButton) {
         // Ocultamos el botón
@@ -69,6 +78,18 @@ class ViewController: UIViewController {
         goButton.hidden = false
         
     } //touch sign up
-    
+    // Acción de pulsar el botón de GO
+    @IBAction func touchGo(sender: UIButton) {
+        var user = PFObject(className: nombreUsuario.text!)
+        user["password"] = password.text!
+        user.saveInBackgroundWithBlock(){
+            (success: Bool, error: NSError?)-> Void in
+            if (!success){
+                
+                print("No se ha podido registrar el usuario")
+            }
+            
+        }
+    }// touch GO
 }// Class
 
