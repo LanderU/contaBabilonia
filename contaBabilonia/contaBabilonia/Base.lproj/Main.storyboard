@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="818" y="232"/>
         </scene>
-        <!--Table View Controller-->
+        <!--ListaProductos-->
         <scene sceneID="w2x-HV-hgi">
             <objects>
-                <tableViewController id="zn0-LG-6Wc" sceneMemberID="viewController">
+                <tableViewController title="ListaProductos" id="zn0-LG-6Wc" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XHn-ym-i6w">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

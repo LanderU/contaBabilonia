@@ -85,6 +85,27 @@ class ViewController: UIViewController {
         
     } //touch sign up
     
+    // Función para parar el segue
+   override func shouldPerformSegueWithIdentifier(identifier: String , sender: AnyObject!) -> Bool {
+    let identifier = "segueTest"
+    if identifier == "segueTest" {
+            if (self.nombreUsuario.text!.isEmpty) {
+                // debug
+                //print("entro aquí")
+                
+                return false
+            }
+                
+            else {
+                return true
+            }
+        }
+        //debug
+        //print("Salto aquí")
+        return true
+    }
+
+    
     // Acción de pulsar el botón de GO
     @IBAction func touchGo(sender: UIButton) {
         
@@ -99,7 +120,8 @@ class ViewController: UIViewController {
                     // Tenemos al usuario por lo tanto avanzamos al tableView
                 } else {
                     // Mostramos el mensaje de error en un textLabel?
-                }
+                    
+                                                   }
             }
         
         } else {
