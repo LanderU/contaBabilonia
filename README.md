@@ -12,3 +12,9 @@ Constará de un login, lista de elementos y una vista de la cantidad de producto
 **Usuario admin**
 
 Mismo que el usuario normal, pero además podrá añadir productos, cambiar precios y actualizar lo consumido por un usuario.
+
+**Aparienca de la app**
+
+*Pantalla inicial*
+
+![](img/PantallaInicio.png)
