@@ -25,4 +25,4 @@ Mismo que el usuario normal, pero además podrá añadir productos, cambiar prec
 
 *Pulsamos el botón Sign up*
 
-![](img/SignUp,png)
+![](img/SignUp.png)
