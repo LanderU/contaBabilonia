@@ -18,3 +18,11 @@ Mismo que el usuario normal, pero además podrá añadir productos, cambiar prec
 *Pantalla inicial*
 
 ![](img/PantallaInicio.png)
+
+*Pulsamos el botón Sign in*
+
+![](img/SignIn.png)
+
+*Pulsamos el botón Sign up*
+
+![](img/SignUp,png)
