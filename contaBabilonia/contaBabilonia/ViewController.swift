@@ -85,6 +85,17 @@ class ViewController: UIViewController {
         
     } //touch sign up
     
+    //Función mensaje de error
+    
+    func showErrorMessage (titulo : String! , mensage: String!){
+        
+        let alert: UIAlertController = UIAlertController(title: titulo, message: mensage, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title : "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+
+    
+    }// End function
+    
     
     
     // Función para parar el segue
@@ -94,9 +105,7 @@ class ViewController: UIViewController {
             if (self.nombreUsuario.text!.isEmpty) {
                 
                 //Mostramos el mensaje de error en una ventana emergente
-                let alert: UIAlertController = UIAlertController(title: "ERROR", message: "Empty USERNAME", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title : "Error", style: UIAlertActionStyle.Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
+                showErrorMessage("Error", mensage: "Empty USERNAME")
                 
                 // Detenemos el segue
                 
