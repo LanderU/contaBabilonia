@@ -74,7 +74,6 @@
                                     <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJt-vi-7Wq"/>
                                     <segue destination="zn0-LG-6Wc" kind="show" id="JPo-RK-hT8"/>
                                 </connections>
                             </button>
@@ -105,7 +104,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="goButton" destination="2fk-L8-7Cr" id="hcN-YE-Cal"/>
+                        <outlet property="goButton" destination="2fk-L8-7Cr" id="xZS-XF-yw2"/>
                         <outlet property="nombreUsuario" destination="q8h-uP-vLR" id="qm9-ag-NX7"/>
                         <outlet property="password" destination="Q7Q-vN-6nd" id="a5W-Yd-yV0"/>
                         <outlet property="repeatTextField" destination="o1n-XT-7fj" id="fyE-ry-bS4"/>
