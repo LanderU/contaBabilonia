@@ -85,13 +85,29 @@ class ViewController: UIViewController {
         
     } //touch sign up
     
+    
+        @IBAction func showAlertButtonTapped(sender: UIButton) {
+            
+            // create the alert
+            let alert = UIAlertController(title: "Error", message: "Empty USERNAME", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+
+
+    
+    
     // Función para parar el segue
    override func shouldPerformSegueWithIdentifier(identifier: String , sender: AnyObject!) -> Bool {
-    let identifier = "segueTest"
-    if identifier == "segueTest" {
+    let identifier = "checkTextFields"
+    if identifier == "checkTextFields" {
             if (self.nombreUsuario.text!.isEmpty) {
-                // debug
-                //print("entro aquí")
+
+                showAlertButtonTapped(goButton)
                 
                 return false
             }
