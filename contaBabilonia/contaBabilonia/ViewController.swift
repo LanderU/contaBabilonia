@@ -192,27 +192,53 @@ class ViewController: UIViewController {
                 } // end if
                 
                 // Comprobación de si encontramos el objeto en Parse
+                
                 // Flag para saber si devuelve objeto o no parse
+                
                 var avanzar: Bool = true
                 
+                func checkParseBackground(avanzar: Bool)-> Bool{
+                    
+                    if(avanzar){
+                        
+                            return true
+                    
+                    }else{
+                        
+                        showErrorMessage("User NOT registered/bad login")
+                            return false
+                    }
+                    
+                    
+                }// end function
                 PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
                     (user: PFUser?, error: NSError?) -> Void in
-                    if user == nil {
-                        // No encontramos el usuario.
+                    if user != nil {
+                        // Encontramos al usuario
+                        avanzar = true
+                    }else{
+                        // No encontramos
                         avanzar = false
-                    } // end if
+                        
+                    }// end if
+                    
+                    checkParseBackground(avanzar)
                
                 } // end loginWith...
-                
+                /*
                 // Comprobamos para avanzar al tableView o cortar
+                print("kk \(avanzar)")
                 if (avanzar) {
+                    print("hola")
                     return true
                 }else {
                     showErrorMessage("User NOT registered/bad login")
+                    print("adios·")
                     return false
+                    
                 } // end if
+                */
                 
-            
             } else {
                 // Comprobamos lo siguiente
                 // USERNAME --> EMPTY
@@ -324,7 +350,6 @@ class ViewController: UIViewController {
         } // end if
         
         // Transición normal al tableView
-        
         return true
         
     } // end function
