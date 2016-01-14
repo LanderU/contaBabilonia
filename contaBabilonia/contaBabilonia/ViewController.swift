@@ -216,6 +216,7 @@ class ViewController: UIViewController {
                             if let error = error {
                                 let _ = error.userInfo["error"] as? NSString
                                 // Show the errorString somewhere and let the user try again.
+                                self.showErrorMessage("Unexpected Error")
                             } // End if
                             
                         }// end signUpIn...
