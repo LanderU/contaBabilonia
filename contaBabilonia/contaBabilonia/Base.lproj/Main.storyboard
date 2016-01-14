@@ -74,7 +74,8 @@
                                     <color key="titleColor" red="0.96529507709999995" green="1" blue="0.99755108560000005" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zn0-LG-6Wc" kind="show" id="JPo-RK-hT8"/>
+                                    <action selector="touchGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTF-O7-Hlm"/>
+                                    <segue destination="zn0-LG-6Wc" kind="show" identifier="salto" id="JPo-RK-hT8"/>
                                 </connections>
                             </button>
                         </subviews>

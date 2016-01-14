@@ -95,264 +95,150 @@ class ViewController: UIViewController {
 
     
     }// End function
+
     
+     // Acción de pulsar el botón de GO
     
-    // Acción de pulsar el botón de GO
-/*
     @IBAction func touchGo(sender: UIButton) {
-        
-        // Creamos la constante para el usuario.
         let usuario = PFUser()
-        //En función de que botón vengamos el botón go se comportará de una manera o de otra.
-        if (flagButton){
-            // Venimos del botón sign in, por lo tanto comprobamos que el usuario está en Parse
+        if (flagButton) {
+            // venimos del botón sign in por lo tanto hacemos las comprobaciones para este botón
+            // USERNAME --> EMPTY
+            // PASSWORD --> EMPTY
+            // OBJETO NO ESTÁ EN PARSE
+            
+            // Comprobación del nombreUsuario vacio
+            if (nombreUsuario.text!.isEmpty){
+                
+                // Mensaje de alerta
+                
+                showErrorMessage("Empty USERNAME")
+                
+                
+            } // end if
+            
+            // Comprobación password vacio
+            if(password.text!.isEmpty){
+                // Mensaje de alerta
+                
+                showErrorMessage("Empty PASSWORD")
+                
+                
+            } // end if
+            
+            // Comprobación de si encontramos el objeto en Parse
             PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
                 (user: PFUser?, error: NSError?) -> Void in
                 if user != nil {
-                    // Tenemos al usuario por lo tanto avanzamos al tableView
-                } else {
-                    // Mostramos el mensaje de error en un textLabel?
+                    // Encontramos al usuario
+                    // Forzamos el segue
+                 self.performSegueWithIdentifier("salto", sender: nil)
+                    
+                }else{
+                    // No encontramos
+                    self.showErrorMessage("Bad User/Login")
+                    
+                }// end if
                 
-                                                   }
-            }
-    // done
-        
+                
+            } // end loginWith...
+            
+            
         } else {
-            // Si venimos de pulsar el botón Sign Up registramos el usuario y avanzamos si el usuario no existe y si la contraseña la ha puesto bien las dos veces.
-            if(password.text! == repeatTextField.text!){
+            // Comprobamos lo siguiente
+            // USERNAME --> EMPTY
+            // PASSWORD --> EMPTY
+            // SECONDPASS --> EMPTY
+            // PASSWORD != REPEATPASSWORD
+            // USUARIO YA EN PARSE
+            // Comprobación del nombreUsuario vacio
+            
+            //Comprobación nombre de usuario
+            if (nombreUsuario.text!.isEmpty){
+                
+                // Mensaje de alerta
+                
+                showErrorMessage("Empty USERNAME")
+                
+                // Detenemos el segue
+                
+                
+            } // end if
+            
+            // Comprobación password vacio
+            if(password.text!.isEmpty){
+                // Mensaje de alerta
+                
+                showErrorMessage("Empty PASSWORD")
+                
+                // Detenemos el segue
+                
+                
+            } // end if
+            
+            // Comprobación repeatPassword vacio
+            
+            if(repeatTextField.text!.isEmpty){
+                
+                // Mensaje de alerta
+                
+                showErrorMessage("Please repeat your password")
+                
+                // Detenemos el segue
+                
+                
+            } // end if
+            
+            if (password.text! != repeatTextField.text!){
+                // Contraseñas no coinciden
+                
+                showErrorMessage("Please, fill with the same password")
+                
+                // Detenemos el segue
+                
+                
+            } else {
+                // Comprobamos en parse que si el usuario existe ya
                 PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
                     (user: PFUser?, error: NSError?) -> Void in
                     if user != nil {
                         // Error el usuario ya lo tenemos en nuestro server
-                        print("El usuario ya está creado")
+                        self.showErrorMessage("The user is already registered")
                     } else {
                         // The login failed. Check error to see why.
                         usuario.username = self.nombreUsuario.text!
                         usuario.password = self.password.text!
+                        // Forzamos el segue
+                        self.performSegueWithIdentifier("salto", sender: nil)
+
                         usuario.signUpInBackgroundWithBlock {
                             (succeeded: Bool, error: NSError?) -> Void in
                             if let error = error {
                                 let _ = error.userInfo["error"] as? NSString
                                 // Show the errorString somewhere and let the user try again.
-                                print("No se puede registrar el usuario")
-                            } else{
-                                print("Pasamos al tableview")
                             } // End if
                             
-                        }// signUp
+                        }// end signUpIn...
                         
                     }// End if
-                }
-            }else {
-               print("Contraseñas no coinciden")
-            }//end if
-        }// end if
-        
-    }// touch GO
-*/
+                } // end loginwith...
+                
+            } // end if comprobar contraseñas
+            
+            
+        } //end if flagButton
+    }// en touchGo
     
-    
-    // Función para parar el segue hacemos las comprobaciones dentro de la función.
-    
-   override func shouldPerformSegueWithIdentifier(identifier: String , sender: AnyObject!) -> Bool {
-        // Constante para hacer las comprobaciones en Parse
-        let usuario = PFUser()
-        let identifier = "checkTextFields"
-        
-        if identifier == "checkTextFields" {
-            if (flagButton) {
-                // venimos del botón sign in por lo tanto hacemos las comprobaciones para este botón
-                // USERNAME --> EMPTY
-                // PASSWORD --> EMPTY
-                // OBJETO NO ESTÁ EN PARSE
-                
-                // Comprobación del nombreUsuario vacio
-                if (nombreUsuario.text!.isEmpty){
-                    
-                    // Mensaje de alerta
-                    
-                    showErrorMessage("Empty USERNAME")
-                    
-                    // Detenemos el segue
-                    
-                    return false
-                    
-                } // end if
-                
-                // Comprobación password vacio
-                if(password.text!.isEmpty){
-                    // Mensaje de alerta
-                    
-                    showErrorMessage("Empty PASSWORD")
-                    
-                    // Detenemos el segue
-                    
-                    return false
-                    
-                } // end if
-                
-                // Comprobación de si encontramos el objeto en Parse
-                
-                // Flag para saber si devuelve objeto o no parse
-                
-                var avanzar: Bool = true
-                
-                func checkParseBackground(avanzar: Bool)-> Bool{
-                    
-                    if(avanzar){
-                        
-                            return true
-                    
-                    }else{
-                        
-                        showErrorMessage("User NOT registered/bad login")
-                            return false
-                    }
-                    
-                    
-                }// end function
-                PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
-                    (user: PFUser?, error: NSError?) -> Void in
-                    if user != nil {
-                        // Encontramos al usuario
-                        avanzar = true
-                    }else{
-                        // No encontramos
-                        avanzar = false
-                        
-                    }// end if
-                    
-                    checkParseBackground(avanzar)
-               
-                } // end loginWith...
-                /*
-                // Comprobamos para avanzar al tableView o cortar
-                print("kk \(avanzar)")
-                if (avanzar) {
-                    print("hola")
-                    return true
-                }else {
-                    showErrorMessage("User NOT registered/bad login")
-                    print("adios·")
-                    return false
-                    
-                } // end if
-                */
-                
-            } else {
-                // Comprobamos lo siguiente
-                // USERNAME --> EMPTY
-                // PASSWORD --> EMPTY
-                // SECONDPASS --> EMPTY
-                // PASSWORD != REPEATPASSWORD
-                // USUARIO YA EN PARSE
-                // Comprobación del nombreUsuario vacio
-                
-                //Comprobación nombre de usuario
-                if (nombreUsuario.text!.isEmpty){
-                    
-                    // Mensaje de alerta
-                    
-                    showErrorMessage("Empty USERNAME")
-                    
-                    // Detenemos el segue
-                    
-                    return false
-                    
-                } // end if
-                
-                // Comprobación password vacio
-                if(password.text!.isEmpty){
-                    // Mensaje de alerta
-                    
-                    showErrorMessage("Empty PASSWORD")
-                    
-                    // Detenemos el segue
-                    
-                    return false
-                    
-                } // end if
-                
-                // Comprobación repeatPassword vacio
-                
-                if(repeatTextField.text!.isEmpty){
-                    
-                    // Mensaje de alerta
-                    
-                    showErrorMessage("Please repeat your password")
-                    
-                    // Detenemos el segue
-                    
-                    return false
-                
-                } // end if
-                
-                if (password.text! != repeatTextField.text!){
-                    // Contraseñas no coinciden
-                    
-                    showErrorMessage("Please, fill with the same password")
-                    
-                    // Detenemos el segue
-                    
-                    return false
-                
-                } else {
-                    
-                    // Comprobamos si el objeto ya exite en parse
-                    var seguir1 : Bool = true
-                    var seguir2 : Bool = true
-                    PFUser.logInWithUsernameInBackground(nombreUsuario.text!, password:password.text!) {
-                        (user: PFUser?, error: NSError?) -> Void in
-                        if user != nil {
-                            // Error el usuario ya lo tenemos en nuestro server
-                           seguir1 = false
-                        } else {
-                            // The login failed. Check error to see why.
-                            usuario.username = self.nombreUsuario.text!
-                            usuario.password = self.password.text!
-                            usuario.signUpInBackgroundWithBlock {
-                                (succeeded: Bool, error: NSError?) -> Void in
-                                if let error = error {
-                                    let _ = error.userInfo["error"] as? NSString
-                                    // Show the errorString somewhere and let the user try again.
-                                    seguir2 = false
-                                } // End if
-                                
-                            }// end signUpIn...
-                            
-                        }// End if
-                    } // end loginwith...
-                    
-                    // Comprobación de si el usuario ya está en parse
-                    if(!seguir1){
-                        // Mostramos menaje de error
-                        
-                        showErrorMessage("The user is already registered")
-                        // Paramos el segue
-                        
-                        return false
-                    }// end if
-                    
-                    // Comprobación de si por algún motivo no se ha podido registrar el usuario
-                    if(!seguir2){
-                        // Error inesperado?
-                        showErrorMessage("Unexpected error")
-                        return false
-                        
-                    } // end if
-                
-                } // end if comprobar contraseñas
+   
 
-            
-            } //end if flagButton
-     
-            
-        } // end if
-        
-        // Transición normal al tableView
-        return true
-        
+    
+    
+    // Función para parar el segue.    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject!) -> Bool {
+       // El segue está parado a no ser que lo forcemos
+        return false
     } // end function
+
     
 }// Class
 
