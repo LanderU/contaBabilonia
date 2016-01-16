@@ -10,18 +10,32 @@ import UIKit
 
 import Parse
 
+import Foundation
+
+import SystemConfiguration
+
 class ViewController: UIViewController {
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Comprobar si tenemos acceso a internet
+  
+    func checkInternet()-> Void{
+        if(!Reachability.isConnectedToNetwork()){
+            showErrorMessage("No access to network")
+        }// end if
+    
+    }// end chckInternet
     
     
     
@@ -100,6 +114,7 @@ class ViewController: UIViewController {
      // Acción de pulsar el botón de GO
     
     @IBAction func touchGo(sender: UIButton) {
+        checkInternet()
         let usuario = PFUser()
         if (flagButton) {
             // venimos del botón sign in por lo tanto hacemos las comprobaciones para este botón
