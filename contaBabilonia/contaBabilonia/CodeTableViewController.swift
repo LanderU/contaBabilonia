@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Parse
 
 class CodeTableViewController: UITableViewController {
-
+    // Referencia al label
+    @IBOutlet weak var nombre: UILabel!
+    // Nos quedamos con el nombre de usuario del usuario activo en la sesión
+    var usuarioActivo = PFUser.currentUser()!.username!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Cargamos el nombre en el textLabel
+        nombre.text! = usuarioActivo
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
