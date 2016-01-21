@@ -220,13 +220,14 @@ class ViewController: UIViewController {
                         // Error el usuario ya lo tenemos en nuestro server
                         self.showErrorMessage("The user is already registered")
                     } else {
-                        // The login failed. Check error to see why.
+                        // Guardamos los datos del usuario
                         usuario.username = self.nombreUsuario.text!
                         usuario.password = self.password.text!
                         // Creamos el campo para el nuevo usuario
                         usuario["total"] = 0
+
                         // Forzamos el segue
-                        self.performSegueWithIdentifier("salto", sender: nil)
+                        //self.performSegueWithIdentifier("salto", sender: nil)
 
                         usuario.signUpInBackgroundWithBlock {
                             (succeeded: Bool, error: NSError?) -> Void in
@@ -235,6 +236,13 @@ class ViewController: UIViewController {
                                 // Show the errorString somewhere and let the user try again.
                                 self.showErrorMessage("Failed, try again")
                             } // End if
+                            PFUser.logInWithUsernameInBackground(usuario.username!, password:usuario.password!) {
+                                (user: PFUser?, error: NSError?) -> Void in
+                                if user != nil {
+                                    // Do stuff after successful login.
+                                    self.performSegueWithIdentifier("salto", sender: nil)
+                                }
+                            }
                             
                         }// end signUpIn...
                         
