@@ -13,12 +13,12 @@ class CodeTableViewController: UITableViewController {
     // Referencia al label
     @IBOutlet weak var nombre: UILabel!
     // Nos quedamos con el nombre de usuario del usuario activo en la sesión
-    var usuarioActivo = PFUser.currentUser()!.username!
+    var usuarioActivo = PFUser.currentUser()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Cargamos el nombre en el textLabel
-        nombre.text! = usuarioActivo
+        // Cargamos el nombre en el textLabel y el total
+        nombre.text! = "\(usuarioActivo.username!): \(usuarioActivo["total"] as! String)"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
