@@ -224,7 +224,7 @@ class ViewController: UIViewController {
                         usuario.username = self.nombreUsuario.text!
                         usuario.password = self.password.text!
                         // Creamos el campo para el nuevo usuario
-                        usuario["total"] = "0"
+                        usuario["total"] = 0
                         // Forzamos el segue
                         self.performSegueWithIdentifier("salto", sender: nil)
 
