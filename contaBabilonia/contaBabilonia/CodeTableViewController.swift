@@ -29,7 +29,8 @@ class CodeTableViewController: UITableViewController {
     
     func cargarParse(){
         var query = PFQuery(className: "Productos")
-        query.findObjectsInBackgroundWithBlock(<#T##block: PFQueryArrayResultBlock?##PFQueryArrayResultBlock?##([PFObject]?, NSError?) -> Void#>)
+        //Recogemos los datos de Parse
+        
         
         
     }
