@@ -152,6 +152,10 @@
                             <outlet property="delegate" destination="zn0-LG-6Wc" id="Rka-3X-oiL"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ili-6f-7He">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </refreshControl>
                     <connections>
                         <outlet property="nombre" destination="cbW-RL-nfl" id="2Kc-Xu-NdN"/>
                     </connections>
